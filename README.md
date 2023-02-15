@@ -14,7 +14,7 @@ Para realizar esta prueba había varios puntos que el proyecto debería tener:
 
 # **Información**
 
-El proceso que he seguido para desarrollar este preoyecto ha sido primero hacer la conexión a la base de datos en `.env`:
+El proceso que he seguido para desarrollar este proyecto ha sido primero hacer la conexión a la base de datos en `.env`:
 ```
 DB_CONNECTION=mysql
 DB_HOST=127.0.0.1
@@ -24,9 +24,9 @@ DB_USERNAME=vilux
 DB_PASSWORD=user
 
 ```
-A continuación crear la base de datos, las migraciones de ambas tablas en `database/migrations/2023_02_14_185654_create_patients_table.php` y `database/migrations/2023_02_14_201341_create_appointments_table.php`. Aquí lo que he hecho ha sido leer el archivo `.csv` de su respectiba tabla, pero solo la primera línea, que es donde los nombres de las columas están denifinos.
+A continuación crear la base de datos, las migraciones de ambas tablas en `database/migrations/2023_02_14_185654_create_patients_table.php` y `database/migrations/2023_02_14_201341_create_appointments_table.php`. Aquí lo que he hecho ha sido leer el archivo `.csv` de su respectiva tabla, pero solo la primera línea, que es donde los nombres de las columnas están definidos.
 
-Al tener ambas tablas creadas, con el seeder que se encuntra en `database/migrations/DatabaseSeeder.php` he leido todas las líneas excepto la primera y separando en un array los datos de cada fila.
+Al tener ambas tablas creadas, con el seeder que se encuentra en `database/migrations/DatabaseSeeder.php` he leído todas las líneas excepto la primera y separando en un array los datos de cada fila.
 
 <p>&nbsp;</p>
 
@@ -39,7 +39,7 @@ Route::get('/', [AppController::class, 'Index']);
 Route::get('/show', [AppController::class, 'show']);
 ```
 
-En el metodo de show de `app/Http/Controllers/AppController.php` es donde está implementada la lógica para que el calendario reciba los datos de la base de datos.
+En el método de show de `app/Http/Controllers/AppController.php` es donde está implementada la lógica para que el calendario reciba los datos de la base de datos.
 ```php
 public function show()
     {
